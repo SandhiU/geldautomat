@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geldautomat</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 100px;
+        }
+        .container {
+            width: 300px;
+            margin: 0 auto;
+        }
+        input[type="text"],
+        input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+        input[type="submit"] {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Geldautomat Anmeldung</h2>
+        <form action="backend_almeldeendpunkt" method="POST">
+            <input type="text" name="benutzername" placeholder="Benutzername" required><br>
+            <input type="password" name="pin" placeholder="PIN" required><br>
+            <input type="submit" value="Anmelden">
+        </form>
+    </div>
+</body>
+</html>

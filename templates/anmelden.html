@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geldautomat</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/anmelden.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h2>Anmeldung</h2>
+        <form action="backend_almeldeendpunkt" method="POST">
+            <input type="text" class="textfeld" id="benutzername" name="benutzername" placeholder="Benutzername" required><br>
+            <input type="password" class="textfeld" id="pin" name="pin" placeholder="123456" required><br>
+            <input type="submit" id="anmelden" value="Anmelden">
+        </form>
+    </div>
+</body>
+</html>

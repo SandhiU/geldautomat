@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Konto aufladen</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/aufladen.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h2>Konto aufladen</h2>
+        <form action="/backend_aufladen" method="POST">
+            <input type="hidden" name="benutzername" value="{{ benutzername }}">
+            <label for="schein">Aufladecode:</label>
+            <input type="text" class="textfeld" id="schein" name="schein" required><br>
+            <input type="submit" id="aufladen" value="Aufladen">
+        </form>
+        <a href="/hauptschnittstelle?benutzername={{ benutzername }}" id="zurueck">Zurück</a>
+    </div>
+</body>
+</html>

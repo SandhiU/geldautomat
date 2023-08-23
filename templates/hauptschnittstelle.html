@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geldautomat</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/hauptschnittstelle.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h2>Geldautomat</h2>
+        <p id="willkommen">Willkommen {{ benutzername }}</p>
+        <div class="dienstleistung-taste-gitter">
+            <button class="dienstleistung-taste">Geld abheben</button>
+            <button class="dienstleistung-taste" onclick="window.location.href='/aufladen?benutzername={{ benutzername }}'">Konto aufladen</button>
+            <button class="dienstleistung-taste">Kontostand anzeigen</button>
+            <button class="dienstleistung-taste">Transaktionshistorie anzeigen</button>
+            <button class="dienstleistung-taste">Konto schließen</button>
+        </div>
+        <a href="/abmelden" id="abmelden">Logout</a>
+    </div>
+</body>
+</html>
